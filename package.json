@@ -26,6 +26,7 @@
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "astro": "^6.3.3",
+    "cat": "^0.2.0",
     "dayjs": "^1.11.20",
     "lodash.kebabcase": "^4.1.1",
     "react": "^19.2.6",

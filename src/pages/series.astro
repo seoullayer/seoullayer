@@ -1,0 +1,36 @@
+---
+import { getEntry, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+const series = await getEntry("pages", "series");
+
+if (!series) {
+  throw new Error(
+    "Missing content entry: `series.md` or `series.mdx` in `src/content/pages/`"
+  );
+}
+
+const { Content } = await render(series);
+---
+
+<Layout
+  title={`${series.data.title} | ${config.site.title}`}
+  description={series.data.description}
+  ogImage={series.data.ogImage}
+  canonicalURL={series.data.canonicalURL}
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle={series.data.title} class="app-prose">
+    <Content />
+  </Main>
+
+  <Footer />
+</Layout>

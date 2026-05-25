@@ -35,6 +35,9 @@ importers:
       astro:
         specifier: ^6.3.3
         version: 6.3.3(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.2)(yaml@2.8.3)
+      cat:
+        specifier: ^0.2.0
+        version: 0.2.0
       dayjs:
         specifier: ^1.11.20
         version: 1.11.20
@@ -1264,6 +1267,10 @@ packages:
 
   caniuse-lite@1.0.30001793:
     resolution: {integrity: sha512-iwSsYWaCOoh26cV8NwNRViHlrfUvYsHDfRVcbtmw0Kg6PJIZZXwMkj1442FYLBGkeUf1juAsU3DTfxW579mrPA==}
+
+  cat@0.2.0:
+    resolution: {integrity: sha512-FrG38TVBt6XKcbWHNZ1AsnFr+eozwypXhaMRHuJrC1JvC+3GaG8G/MwuChyJOVVdPT5VsH91PiRFaheQlK/6Gg==}
+    hasBin: true
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -4279,6 +4286,8 @@ snapshots:
   camelize@1.0.1: {}
 
   caniuse-lite@1.0.30001793: {}
+
+  cat@0.2.0: {}
 
   ccount@2.0.1: {}
 
