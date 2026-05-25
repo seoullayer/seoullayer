@@ -1,37 +1,42 @@
 ---
 title: "About"
-description: "A bit about me and this blog."
+description: "Who I am, what this blog is about, and why I write it."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+# About
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+I am an engineer living in Seoul, South Korea. By profession, I work in semiconductor packaging design. By evening and weekend, I run a homelab out of a storage closet in my apartment.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+SeoulLayer is where I write about self-hosting, homelab infrastructure, and smart home automation from the perspective of someone doing all of it inside a Korean apartment.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+---
 
-## Features
+## How This Started
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+During a full interior renovation of my apartment, I discovered that the bathroom wiring did not match the switch box it was connected to. Fixing it properly was too expensive, so I started looking for workarounds. That search led me to IoT devices, then to Home Assistant, then to a mini PC running Proxmox, and eventually to a full server sitting in the storage room next to my front door.
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+What began as a solution to a wiring problem turned into something I never planned to build.
 
-and so much more.
+## What I Write About
 
-## Show your support
+This blog covers the practical side of running infrastructure at home in Korea. That includes:
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+- Building and maintaining a homelab in a Korean apartment, where space, noise, power costs, and concrete walls all shape the decisions you make.
+- Self-hosting services like Home Assistant, Nextcloud, Immich, and Vaultwarden as alternatives to commercial platforms.
+- Networking, monitoring, and security for a homelab that needs to be reachable from outside the apartment without exposing your home IP.
+- The real costs, trade-offs, and lessons learned from doing all of this in a country where electricity pricing is progressive, DDR5 is expensive, and most IoT guides are written for houses, not apartments.
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+If you have ever wondered what it takes to self-host in a Korean apartment, this blog is written for you.
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+## What I Run
 
-Kyay zuu! 🙏🏼
+The current setup is a Proxmox server with an Intel i7-14700 and 64GB of RAM, running over fifteen services including Home Assistant, Nextcloud, Immich, Vaultwarden, Jellyfin, and a monitoring stack built on Prometheus, Loki, and Grafana. The network runs on UniFi equipment, and external access goes through Cloudflare Tunnel.
+
+The full hardware breakdown and service list are covered in detail across the blog.
+
+## Contact
+
+If you have questions, suggestions, or just want to say hello, you can reach me at:
+
+📧 **hello@seoullayer.com**
+
