@@ -49,11 +49,14 @@ LXC vs VM decisions, memory ballooning, swap mysteries, and the small operationa
 
 Why a Mac user in Korea still needs Windows, how dual ISO mounting made installation painless, and the operational pattern for on-demand VMs.
 
+### 10. [Backup Strategy for a Proxmox Homelab](/posts/backup-strategy-proxmox-homelab)
+
+How I decide what to back up and what to skip, the swap problem that comes from backing up ten containers at once, and why mirrors are not backups.
+
 ---
 
 ## What's Coming Next
 
-- **Backup strategy** — Proxmox scheduled backups, retention policies, and off-site backup planning.
 - **Security hardening** — Cloudflare Access, firewall policies, and SSH configuration.
 
 
