@@ -3,7 +3,6 @@ title: "About"
 description: "Who I am, what this blog is about, and why I write it."
 ---
 
-# About
 
 I am an engineer living in Seoul, South Korea. By profession, I work in semiconductor packaging design. By evening and weekend, I run a homelab out of a storage closet in my apartment.
 
