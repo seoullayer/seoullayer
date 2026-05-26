@@ -1,7 +1,7 @@
 ---
 title: "Backup Strategy for a Proxmox Homelab"
 description: "How I decide what to back up, what to skip, and the swap problem that made me rethink scheduling — a practical backup strategy for a single-server homelab."
-pubDatetime: 2026-05-27T00:00:00Z
+pubDatetime: 2026-05-26T21:09:00Z
 tags: ["homelab", "proxmox", "self-hosting", "backup"]
 featured: false
 draft: false
