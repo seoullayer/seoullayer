@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 Across my previous posts, the word "backup" keeps appearing in the future tense. The hardware build post mentioned needing a backup plan. The cost post talked about data that was not being backed up at all. The Proxmox tips post covered scheduled backups briefly but acknowledged that everything was stored on the same server.
