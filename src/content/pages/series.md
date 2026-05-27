@@ -55,7 +55,7 @@ How I decide what to back up and what to skip, the swap problem that comes from 
 
 ### 11. [Adding Cloudflare Access to a Homelab](/posts/cloudflare-access-homelab)
 
-Setting up Cloudflare Access with Google authentication, the app compatibility problem that limited where it could be applied, and why only one service ended up behind it.
+Setting up Cloudflare Access with Google authentication, the app compatibility problem that limited where it could be applied, and why only one service ended up behind it. 
 
 ---
 
