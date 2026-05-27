@@ -1,7 +1,7 @@
 -----
 
-## title: “Korean Apartment Homelab: Series Index”
-description: “A complete guide to building and running a self-hosted homelab in a Korean apartment.”
+## title: "Korean Apartment Homelab: Series Index"
+description: "A complete guide to building and running a self-hosted homelab in a Korean apartment."
 
 # Korean Apartment Homelab: Series Index
 
