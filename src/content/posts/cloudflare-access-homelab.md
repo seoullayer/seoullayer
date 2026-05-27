@@ -1,4 +1,4 @@
------
+---
 
 ## title: “Adding Cloudflare Access to a Homelab: The Gap Between Plan and Reality”
 description: “How I set up Cloudflare Access to add authentication before my services, the Google OAuth traps that wasted hours, and why only one service ended up behind it.”
@@ -6,6 +6,7 @@ pubDatetime: 2026-05-27T00:00:00Z
 tags: [“homelab”, “proxmox”, “self-hosting”, “cloudflare-tunnel”, “security”, “cloudflare-access”]
 featured: false
 draft: false
+——-
 
 ## Introduction
 
