@@ -55,13 +55,14 @@ How I decide what to back up and what to skip, the swap problem that comes from 
 
 ### 11. [Adding Cloudflare Access to a Homelab](/posts/cloudflare-access-homelab)
 
-Setting up Cloudflare Access with Google authentication, the app compatibility problem that limited where it could be applied, and why only one service ended up behind it. 
+Setting up Cloudflare Access with Google authentication, the app compatibility problem that limited where it could be applied, and why only one service ended up behind it.
+
+### 12. [SSH Hardening on Proxmox: More Secure and More Convenient](/posts/ssh-hardening-proxmox-homelab)
+
+Switching from password to key-based SSH authentication, saving the passphrase to macOS Keychain for passwordless login, and the iPhone app compatibility issue that required a separate key.
 
 ---
 
 ## What's Coming Next
-
-- **SSH hardening** — Key-based authentication and securing the Proxmox host.
-
 
 This page will be updated as new posts are published.
