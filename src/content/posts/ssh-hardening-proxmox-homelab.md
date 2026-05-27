@@ -1,7 +1,7 @@
 ---
 title: "SSH Hardening on Proxmox: More Secure and More Convenient"
 description: "How I switched from password to key-based SSH authentication on my Proxmox homelab, why it ended up being easier than before, and the iPhone compatibility issue I did not expect."
-pubDatetime: 2026-05-27T00:00:00Z
+pubDatetime: 2026-05-27T14:40:00Z
 tags: ["homelab", "proxmox", "self-hosting", "security", "ssh"]
 featured: false
 draft: false
