@@ -1,7 +1,7 @@
----
-title: "Korean Apartment Homelab: Series Index"
-description: "A complete guide to building and running a self-hosted homelab in a Korean apartment."
----
+-----
+
+## title: “Korean Apartment Homelab: Series Index”
+description: “A complete guide to building and running a self-hosted homelab in a Korean apartment.”
 
 # Korean Apartment Homelab: Series Index
 
@@ -9,7 +9,7 @@ This series documents how I built a self-hosted homelab from scratch inside a Ko
 
 Each post builds on the previous one, but they also work as standalone reads if a specific topic is what you are looking for.
 
----
+-----
 
 ## The Series
 
@@ -23,7 +23,7 @@ A walkthrough of every service running on Proxmox: what runs as a VM, what runs 
 
 ### 3. [My Home Assistant Journey in a Korean Apartment](/posts/my-home-assistant-journey-in-a-korean-apartment)
 
-The deep dive into smart home automation. From SmartThings fragmentation to a unified Home Assistant setup, Zigbee mesh optimization through Korean concrete walls, motorized curtains synced to sunrise, and the wall pad integration that hasn't worked yet.
+The deep dive into smart home automation. From SmartThings fragmentation to a unified Home Assistant setup, Zigbee mesh optimization through Korean concrete walls, motorized curtains synced to sunrise, and the wall pad integration that hasn’t worked yet.
 
 ### 4. [Nginx Proxy Manager on Proxmox](/posts/nginx-proxy-manager-on-proxmox-in-korea)
 
@@ -35,7 +35,7 @@ Building a monitoring stack after two incidents that went unnoticed for days. Pr
 
 ### 6. [The Real Cost of Self-Hosting in Korea](/posts/real-cost-of-self-hosting-in-korea)
 
-An honest accounting of hardware costs, electricity under Korea's progressive pricing system, and whether replacing commercial services actually saves money.
+An honest accounting of hardware costs, electricity under Korea’s progressive pricing system, and whether replacing commercial services actually saves money.
 
 ### 7. [From Port Forwarding to Cloudflare Tunnel](/posts/cloudflare-tunnel-migration-from-port-forwarding)
 
@@ -45,7 +45,7 @@ Migrating from port forwarding to Cloudflare Tunnel. How the 100MB per-request l
 
 LXC vs VM decisions, memory ballooning, swap mysteries, and the small operational lessons that documentation does not teach you.
 
-### 9. [Running Windows 11 on Proxmox: A Mac User's Escape Hatch in Korea](/posts/windows-11-proxmox-korea-mac)
+### 9. [Running Windows 11 on Proxmox: A Mac User’s Escape Hatch in Korea](/posts/windows-11-proxmox-korea-mac)
 
 Why a Mac user in Korea still needs Windows, how dual ISO mounting made installation painless, and the operational pattern for on-demand VMs.
 
@@ -53,11 +53,14 @@ Why a Mac user in Korea still needs Windows, how dual ISO mounting made installa
 
 How I decide what to back up and what to skip, the swap problem that comes from backing up ten containers at once, and why mirrors are not backups.
 
----
+### 11. [Adding Cloudflare Access to a Homelab](/posts/cloudflare-access-homelab)
 
-## What's Coming Next
+Setting up Cloudflare Access with Google authentication, the app compatibility problem that limited where it could be applied, and why only one service ended up behind it.
 
-- **Security hardening** — Cloudflare Access, firewall policies, and SSH configuration.
+-----
 
+## What’s Coming Next
+
+- **SSH hardening** — Key-based authentication and securing the Proxmox host.
 
 This page will be updated as new posts are published.
