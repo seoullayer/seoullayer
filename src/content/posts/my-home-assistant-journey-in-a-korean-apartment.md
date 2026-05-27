@@ -96,11 +96,11 @@ For the Zigbee coordinator, I went with the SLZB-MR3 rather than the SLZB-06 tha
 
 Initially, I hid the coordinator behind the TV to keep things tidy. That turned out to be a mistake. The TV and surrounding electronics created enough interference that Zigbee response times across the apartment were noticeably sluggish.
 
-The worst case was a smart switch in the master bathroom. It would either respond with a significant delay or sometimes not respond at all. After spending time diagnosing the issue, I realized the signal strength was simply too weak by the time it reached that far corner of the apartment through multiple concrete walls.
+The worst case was a smart switch in the master bathroom. It would either respond with a significant delay or sometimes not respond at all. After spending time diagnosing the issue, I realized the signal strength was simply too weak by the time it reached that far corner of the apartment, likely due to the combination of distance, multiple wall partitions, and electronic interference near the coordinator.
 
 The fix was simple: I added a smart plug with Zigbee repeater functionality between the coordinator and the bathroom. The difference was immediate. Every device started responding as if it were wired directly. The Zigbee mesh network, once it had enough repeater nodes in the right positions, transformed from occasionally unreliable to rock solid.
 
-For anyone building a Zigbee-based smart home in a Korean concrete apartment, this is probably the most practical advice I can offer: do not underestimate signal attenuation through concrete walls, and plan your repeater placement from the beginning rather than troubleshooting it later.
+For anyone building a Zigbee-based smart home in a Korean concrete apartment, this is probably the most practical advice I can offer: do not underestimate signal attenuation through walls and distance in an apartment, and keep your coordinator away from TVs and other electronics that generate interference.
 
 ---
 
