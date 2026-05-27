@@ -1,11 +1,11 @@
 ---
-title: “Adding Cloudflare Access to a Homelab: The Gap Between Plan and Reality”
-description: “How I set up Cloudflare Access to add authentication before my services, the Google OAuth traps that wasted hours, and why only one service ended up behind it.”
+title: "Adding Cloudflare Access to a Homelab: The Gap Between Plan and Reality"
+description: "How I set up Cloudflare Access to add authentication before my services, the Google OAuth traps that wasted hours, and why only one service ended up behind it."
 pubDatetime: 2026-05-27T00:00:00Z
-tags: [“homelab”, “proxmox”, “self-hosting”, “cloudflare-tunnel”, “security”, “cloudflare-access”]
+tags: ["homelab", "proxmox", "self-hosting", "cloudflare-tunnel", "security", "cloudflare-access"]
 featured: false
 draft: false
-——-
+---
 
 ## Introduction
 
@@ -13,11 +13,11 @@ In the Cloudflare Tunnel post, I ended with a note about Cloudflare Access. The 
 
 I evaluated it. The answer was more complicated than I expected.
 
-Cloudflare Access works exactly as advertised. A Google login screen appears before the service loads, and only approved users can get through. The setup is not difficult once you know where the traps are. But the gap between “this works in a browser” and “this works with every app on every device” turned out to be the gap that shaped my entire approach.
+Cloudflare Access works exactly as advertised. A Google login screen appears before the service loads, and only approved users can get through. The setup is not difficult once you know where the traps are. But the gap between "this works in a browser" and "this works with every app on every device" turned out to be the gap that shaped my entire approach.
 
 This post covers the setup process, two specific problems that cost me significant time, and the honest conclusion about which services actually belong behind Access in a homelab.
 
------
+---
 
 ## What Cloudflare Access Actually Does
 
@@ -29,7 +29,7 @@ The practical effect is that your Home Assistant login page, your Nextcloud logi
 
 For a homelab where services are exposed to the internet through Cloudflare Tunnel, this sounds like an obvious improvement. And it is — with one significant limitation that I did not fully appreciate until I tried to use it.
 
------
+---
 
 ## Setting Up Google as an Identity Provider
 
@@ -71,7 +71,7 @@ I made the mistake of entering my actual email address into this field, thinking
 
 The fix was simply clearing the Email claim field and leaving it empty. Authentication worked immediately after that.
 
------
+---
 
 ## Creating an Access Application
 
@@ -86,7 +86,7 @@ The policy is where you control access. For a personal homelab, the simplest app
 
 The setup is straightforward and took only a few minutes per service. The real complexity came after.
 
------
+---
 
 ## The App Problem
 
@@ -106,11 +106,11 @@ There are workarounds. Cloudflare offers Service Tokens that can be embedded in 
 
 This single limitation reshaped my entire Access strategy.
 
------
+---
 
 ## The Realistic Split
 
-The question changed from “which services should I protect with Access” to “which services do I only access through a browser.”
+The question changed from "which services should I protect with Access" to "which services do I only access through a browser."
 
 Going through my usage patterns, the answer was clear:
 
@@ -132,7 +132,7 @@ The final configuration:
 
 One service behind Access. Out of the five I originally planned to protect.
 
------
+---
 
 ## Was It Worth It?
 
@@ -146,7 +146,7 @@ Second, the process taught me where Access fits and where it does not in a homel
 
 Third, for Open WebUI specifically, Access adds genuine value. Open WebUI connects to a local LLM and supports web search, which means conversations can contain sensitive queries. Having Google authentication in front of it means that even if someone discovers the URL, they cannot interact with my LLM instance. For a service with no built-in user management, Access is effectively its entire authentication layer.
 
------
+---
 
 ## What I Learned
 
@@ -160,7 +160,7 @@ Third, for Open WebUI specifically, Access adds genuine value. Open WebUI connec
 
 **Do not wait for perfection.** I initially hesitated to set up Access because I wanted to apply it to everything or not at all. The reality is that protecting even one service is better than protecting none while waiting for a perfect solution that does not exist.
 
------
+---
 
 ## What’s Next
 
