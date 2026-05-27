@@ -46,7 +46,7 @@ First, when configuring the OAuth consent screen, Google asks for basic informat
 - `openid`
 - `.../auth/userinfo.email`
 - `.../auth/userinfo.profile`
-![Your Non-sensitive scopes](/images/homelab/non-senstive_scopes.webp)
+![Your Non-sensitive scopes](/images/homelab/non-sensitive_scopes.webp)
 
 
 Without these scopes, Cloudflare cannot retrieve the user’s email address during authentication. The login will appear to work — Google shows its normal consent screen — but Cloudflare will reject the response because it did not receive the email claim it expects. The error message does not clearly indicate that missing scopes are the problem, which makes this easy to spend a long time debugging.
