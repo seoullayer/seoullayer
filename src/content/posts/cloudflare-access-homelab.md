@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 In the Cloudflare Tunnel post, I ended with a note about Cloudflare Access. The idea was straightforward: add an authentication layer in front of my services so that visitors would need to verify their identity before reaching the login page. An email verification step before Home Assistant, for example. Whether the added friction was worth it for services that already had their own authentication was something I wanted to evaluate.

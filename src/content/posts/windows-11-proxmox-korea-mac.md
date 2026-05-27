@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 My daily driver is a MacBook Pro. macOS is where I do almost everything: work, browsing, writing, terminal sessions into my homelab. It is a comfortable environment and I have no intention of changing it.

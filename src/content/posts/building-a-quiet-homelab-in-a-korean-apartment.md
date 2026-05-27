@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Why I Built a Homelab in Seoul
 
 I moved into my current apartment after a full interior renovation. During the renovation process, I discovered that the wiring inside the bathroom was different from the wiring connected to the bathroom switch box.

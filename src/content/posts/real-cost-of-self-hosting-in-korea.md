@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 In my previous posts, I have written about hardware, services, Home Assistant, networking, and monitoring. But there is one question I have avoided until now: how much does all of this actually cost?

@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 In my previous posts, I covered the hardware behind my homelab, the full list of services running on Proxmox, and my Home Assistant journey. But one topic I have only mentioned in passing is how I actually access these services from outside my apartment.

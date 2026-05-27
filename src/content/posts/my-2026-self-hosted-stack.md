@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 In my previous post, I wrote about how a bathroom wiring problem during a renovation led me down the path of building a homelab in my Korean apartment. What started as a simple Home Assistant setup on an Intel N100 mini PC has since grown into a full Proxmox server running more than a dozen services.

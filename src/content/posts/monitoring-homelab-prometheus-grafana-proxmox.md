@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 In my previous posts, I covered the hardware, the services, Home Assistant, and how I expose everything through Nginx Proxy Manager. But there is one layer I skipped over: how I know when something goes wrong.

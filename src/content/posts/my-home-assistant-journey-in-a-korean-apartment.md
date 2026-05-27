@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 In my previous posts, I covered how a bathroom wiring problem during a renovation led me to build a homelab, and walked through all the services running on my Proxmox server. But I have not yet written about the one service that started it all: Home Assistant.

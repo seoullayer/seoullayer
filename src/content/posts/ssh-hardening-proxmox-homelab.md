@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 Every post in this series that touches security has ended with the same unfinished item: SSH hardening. The Proxmox host, the machine that runs everything else, was still using default SSH settings. Password authentication enabled, no key requirement, nothing changed from the day I installed Proxmox.

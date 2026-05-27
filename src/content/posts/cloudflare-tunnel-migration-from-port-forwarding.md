@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 The moment I deleted the port forwarding rules from my UniFi gateway felt more significant than it probably should have. Two lines in a firewall configuration, ports 80 and 443, removed in seconds. But those two rules had been the front door to my entire homelab for months, and removing them meant the door no longer existed.

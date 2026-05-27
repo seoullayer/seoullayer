@@ -7,6 +7,8 @@ featured: false
 draft: false
 ---
 
+*This post is part of the [Korean Apartment Homelab](/series) series.*
+
 ## Introduction
 
 Over the past several posts, I have written about hardware, services, Home Assistant, networking, monitoring, costs, and Cloudflare Tunnel. Each of those posts focused on a specific topic, but along the way I accumulated a collection of smaller lessons that did not fit neatly into any single post.
