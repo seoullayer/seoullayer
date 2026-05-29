@@ -3,8 +3,6 @@ title: "Korean Apartment Homelab: Series Index"
 description: "A complete guide to building and running a self-hosted homelab in a Korean apartment."
 ---
 
-# Korean Apartment Homelab: Series Index
-
 This series documents how I built a self-hosted homelab from scratch inside a Korean apartment. It started with a bathroom wiring problem and grew into a full Proxmox server running over fifteen services.
 
 Each post builds on the previous one, but they also work as standalone reads if a specific topic is what you are looking for.
