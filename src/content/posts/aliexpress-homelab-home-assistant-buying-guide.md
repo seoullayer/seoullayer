@@ -49,7 +49,7 @@ This category taught me the most about how AliExpress products actually work, an
 
 Motorized curtain motors on AliExpress come from a small number of actual manufacturers, but they appear under dozens of different store names and brand labels. The motor casings look identical. The specifications are identical. The listing photos look like they came from the same photoshoot — because they probably did. Different sellers, same factory.
 
-![Four AliExpress listings for smart curtain motors. Different brand names, different prices, nearly identical hardware.](/images/homelab/alexpress-curtainmotor.webp)
+![Four AliExpress listings for smart curtain motors. Different brand names, different prices, nearly identical hardware.](/images/homelab/aliexpress-curtainmotor.webp)
 
 Most of the time, this does not matter. The product works and integrates with Home Assistant through Zigbee2MQTT.
 
