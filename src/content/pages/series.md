@@ -61,6 +61,10 @@ Setting up Cloudflare Access with Google authentication, the app compatibility p
 
 Switching from password to key-based SSH authentication, saving the passphrase to macOS Keychain for passwordless login, and the iPhone app compatibility issue that required a separate key.
 
+### 13. [Buying Smart Home Hardware on AliExpress: What Actually Works with Home Assistant](/posts/aliexpress-homelab-home-assistant-buying-guide)
+
+A practical buying guide for Home Assistant users. What to look for in Zigbee switches and curtain motors, how to find trustworthy sellers, why Zigbee beats Wi-Fi at scale, and the compatibility checks worth doing before you order.
+
 ---
 
 ## What's Coming Next
