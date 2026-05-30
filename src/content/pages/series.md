@@ -63,6 +63,10 @@ Switching from password to key-based SSH authentication, saving the passphrase t
 
 A practical buying guide for Home Assistant users. What to look for in Zigbee switches and curtain motors, how to find trustworthy sellers, why Zigbee beats Wi-Fi at scale, and the compatibility checks worth doing before you order.
 
+### 14. [Starting a Homelab with an N100 Mini PC: What I Ran, What I Learned, and When to Move On](/posts/n100-mini-pc-homelab-starting-guide)
+
+Why an N100-class mini PC is the right starting point for a homelab, what a full year of running one actually looks like, and the signals that told me it was time to upgrade.
+
 ---
 
 ## What's Coming Next
