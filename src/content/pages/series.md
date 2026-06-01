@@ -67,6 +67,10 @@ A practical buying guide for Home Assistant users. What to look for in Zigbee sw
 
 Why an N100-class mini PC is the right starting point for a homelab, what a full year of running one actually looks like, and the signals that told me it was time to upgrade.
 
+### 15. [Building the Network Layer: UniFi, a Korean ISP, and the IPTV VLAN Problem](/posts/unifi-network-korean-apartment-homelab)
+
+The network underneath the homelab. Why I put the ISP modem in bridge mode for a direct public IP, the IPTV VLAN problem that breaks the moment you replace a Korean ISP router, AP placement against concrete walls, and an honest accounting of why the network is still mostly flat.
+
 ---
 
 ## What's Coming Next
