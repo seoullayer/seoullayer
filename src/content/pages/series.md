@@ -71,6 +71,10 @@ Why an N100-class mini PC is the right starting point for a homelab, what a full
 
 The network underneath the homelab. Why I put the ISP modem in bridge mode for a direct public IP, the IPTV VLAN problem that breaks the moment you replace a Korean ISP router, AP placement against concrete walls, and an honest accounting of why the network is still mostly flat.
 
+### 16. [Migrating from Xpenology to TrueNAS: The MAC Address Conflict I Didn't See Coming](/posts/truenas-xpenology-migration-mac-conflict)
+
+Leaving Xpenology for the stability of TrueNAS. The duplicate MAC address conflict that broke my network when two servers ran at once, why the reboot that fixed it was luck rather than a solution, and how I actually set up the ZFS mirror, datasets, and SMB/NFS shares.
+
 ---
 
 ## What's Coming Next
