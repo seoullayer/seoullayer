@@ -79,6 +79,10 @@ Leaving Xpenology for the stability of TrueNAS. The duplicate MAC address confli
 
 The one post in this series about taking something off the server. Why I moved Squoosh from a Docker container to a standalone Mac app with Electron, the COOP/COEP header injection that made the wrapper work, and why self-hosting was the wrong answer for this particular tool.
 
+### 18. [Running a Local LLM: Why I Self-Host AI for the Things I Can't Send to the Cloud](/posts/local-llm-open-webui-privacy-homelab)
+
+Running Gemma 4 E4B locally with LM Studio and Open WebUI on a 16GB MacBook. Why the reason is privacy rather than performance, how a local model fits into my Obsidian note workflow, the questions I only ask when nothing leaves the machine, and the honest tradeoffs of loading and unloading a model on limited memory.
+
 ---
 
 ## What's Coming Next
