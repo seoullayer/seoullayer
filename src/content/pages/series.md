@@ -75,6 +75,10 @@ The network underneath the homelab. Why I put the ISP modem in bridge mode for a
 
 Leaving Xpenology for the stability of TrueNAS. The duplicate MAC address conflict that broke my network when two servers ran at once, why the reboot that fixed it was luck rather than a solution, and how I actually set up the ZFS mirror, datasets, and SMB/NFS shares.
 
+### 17. [Squoosh as a Native Mac App: The One Service I Chose Not to Self-Host](/posts/squoosh-native-mac-app-electron)
+
+The one post in this series about taking something off the server. Why I moved Squoosh from a Docker container to a standalone Mac app with Electron, the COOP/COEP header injection that made the wrapper work, and why self-hosting was the wrong answer for this particular tool.
+
 ---
 
 ## What's Coming Next
