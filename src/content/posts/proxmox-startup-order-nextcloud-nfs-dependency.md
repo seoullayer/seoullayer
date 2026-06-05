@@ -1,8 +1,8 @@
 ---
-## title: “Boot and Shutdown Order: Two Different Reasons Nextcloud Kept Breaking on Reboot”
-description: “Nextcloud showed maintenance mode after every reboot, but it turned out to be two separate problems with two separate fixes: shutdown order and a boot-time mount race. How to tell them apart and how Proxmox startup delay actually works.”
-pubDatetime: 2026-06-05T00:16:00Z
-tags: [“homelab”, “proxmox”, “self-hosting”, “nextcloud”, “truenas”, “nfs”]
+title: "Boot and Shutdown Order: Two Different Reasons Nextcloud Kept Breaking on Reboot"
+description: "Nextcloud showed maintenance mode after every reboot, but it turned out to be two separate problems with two separate fixes: shutdown order and a boot-time mount race. How to tell them apart and how Proxmox startup delay actually works."
+pubDatetime: 2026-06-04T00:17:00Z
+tags: ["homelab", "proxmox", "self-hosting", "nextcloud", "truenas", "nfs"]
 featured: false
 draft: false
 ---
@@ -17,7 +17,7 @@ Rebooting the whole server was a different story. Every time the host came back 
 
 What I eventually figured out is that this was not one problem. It was two, with two different causes and two different fixes, and they happened to produce a similar-looking symptom. The thing that let me tell them apart was not a log file. It was that the two states needed completely different actions to recover from. That detail is what this post is really about, because if you are hitting the same maintenance loop, knowing which of the two you have is the whole game.
 
------
+---
 
 ## A Quick Note on Maintenance Mode
 
@@ -31,19 +31,19 @@ docker compose exec -u www-data app php occ maintenance:mode --off
 
 Hold onto that command, because whether or not it actually fixes the problem is exactly what distinguishes the two failures below.
 
------
+---
 
 ## Problem One: Shutdown Order
 
-With no startup or shutdown order configured, Proxmox shuts guests down without regard to their dependencies. In my case TrueNAS would often shut down before Nextcloud had finished. The moment TrueNAS went down, the NFS share backing Nextcloud’s data disappeared out from under a service that was still running.
+With no startup or shutdown order configured, Proxmox shuts guests down without regard to their dependencies. In my case TrueNAS would often shut down before Nextcloud had finished. The moment TrueNAS went down, the NFS share backing Nextcloud's data disappeared out from under a service that was still running.
 
-I could see this happening indirectly: Nextcloud took an unusually long time to shut down, far longer than the other services, because it was struggling against storage that had vanished mid-shutdown. The unclean stop left Nextcloud’s maintenance flag set, and on the next boot it came up in maintenance mode.
+I could see this happening indirectly: Nextcloud took an unusually long time to shut down, far longer than the other services, because it was struggling against storage that had vanished mid-shutdown. The unclean stop left Nextcloud's maintenance flag set, and on the next boot it came up in maintenance mode.
 
 The tell for this version of the problem is the recovery. Running the `occ maintenance:mode --off` command cleared it. That is the signature of a genuine maintenance flag: Nextcloud really had set the flag, so explicitly turning it off resolved the state. If the off command works, you are dealing with a flag that got left on, which points back at an unclean shutdown.
 
 The fix is shutdown order. Proxmox lets you assign each guest a start/shutdown order number. Guests start in ascending order, and critically, shut down in the reverse. I gave TrueNAS order 1 and Nextcloud order 2. Because shutdown runs highest-first, Nextcloud (2) now stops before TrueNAS (1). Nextcloud gets to shut down cleanly while its storage is still mounted, instead of having the NFS pulled away mid-stop. With that in place, the long shutdowns stopped, and so did the maintenance flag that the unclean stops had been leaving behind.
 
------
+---
 
 ## Problem Two: The Boot-Time Mount Race
 
@@ -55,11 +55,11 @@ That difference in recovery is the clue. If clearing the maintenance flag does n
 
 The fix is to make sure the storage is ready before Nextcloud starts, and this is where Proxmox startup delay comes in. But there is a trap here that cost me time, because the delay does not work the way intuition suggests.
 
-My first instinct was to put the delay on Nextcloud. Nextcloud is the thing that needs to wait, so tell Nextcloud to wait. I gave it a 60-second delay and it changed nothing. The reason is that in Proxmox, the startup delay attached to a guest does not mean “wait this long before starting me.” It means “after starting me, wait this long before starting the next guest in the order.” The delay applies forward, to whatever comes after, not to the guest it is set on. A delay on Nextcloud was pushing back whatever started after Nextcloud, which was not the problem.
+My first instinct was to put the delay on Nextcloud. Nextcloud is the thing that needs to wait, so tell Nextcloud to wait. I gave it a 60-second delay and it changed nothing. The reason is that in Proxmox, the startup delay attached to a guest does not mean "wait this long before starting me." It means "after starting me, wait this long before starting the next guest in the order." The delay applies forward, to whatever comes after, not to the guest it is set on. A delay on Nextcloud was pushing back whatever started after Nextcloud, which was not the problem.
 
 The delay belongs on the dependency. I moved the 60-second delay to TrueNAS, the guest with order 1. Now the boot sequence is: start TrueNAS, wait 60 seconds, then start Nextcloud. That pause is the window TrueNAS needs to finish booting and serve its NFS. By the time Nextcloud starts, the mount is there, and it comes up cleanly. After moving the delay to the right guest, the reboots were finally clean in both directions.
 
------
+---
 
 ## Why Only Nextcloud
 
@@ -69,7 +69,7 @@ Because they tolerate a missing mount and Nextcloud does not. If the share is no
 
 That is worth saying plainly because it reframes the whole situation. Nextcloud is not the fragile one here. It is the strict one, and the strictness is a feature when the thing it is protecting is your data. The other services are more forgiving precisely because the cost of them getting it wrong is lower. Knowing which of your services are strict and which are tolerant tells you exactly which ones need careful boot and shutdown choreography. You do not have to orchestrate everything, only the strict ones.
 
------
+---
 
 ## Lessons Learned
 
@@ -77,15 +77,15 @@ That is worth saying plainly because it reframes the whole situation. Nextcloud 
 
 **Shutdown order protects strict services on the way down.** Proxmox shuts guests down in reverse start order. Giving the storage a lower order number than the services that depend on it means those services stop first, while their storage is still mounted, avoiding the unclean stop that leaves a maintenance flag set.
 
-**Startup delay applies forward, to the next guest.** The delay on a guest means “after starting this one, wait before starting the next.” It does not make the guest it is set on wait. Put the delay on the dependency (the NAS), not on the dependent service, so the pause lands before the dependent service starts.
+**Startup delay applies forward, to the next guest.** The delay on a guest means "after starting this one, wait before starting the next." It does not make the guest it is set on wait. Put the delay on the dependency (the NAS), not on the dependent service, so the pause lands before the dependent service starts.
 
-**“Started” is not “ready.”** Ordering guarantees the NAS starts first, but starting is not the same as serving NFS. The delay is what bridges the gap between powered on and actually ready.
+**"Started" is not "ready."** Ordering guarantees the NAS starts first, but starting is not the same as serving NFS. The delay is what bridges the gap between powered on and actually ready.
 
 **Know which services are strict.** Nextcloud latches; Jellyfin and Immich recover on their own. Spend the boot-order effort on the strict services, and recognize that their strictness is protecting your data, not malfunctioning.
 
------
+---
 
-## What’s Next
+## What's Next
 
 These were small fixes, an order number and a delay in the right place, but together they closed the last rough edges from the TrueNAS migration. Planned reboots are now clean in both directions with no manual cleanup, which is most of what reliability means day to day.
 
