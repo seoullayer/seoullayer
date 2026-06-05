@@ -83,6 +83,10 @@ The one post in this series about taking something off the server. Why I moved S
 
 Running Gemma 4 E4B locally with LM Studio and Open WebUI on a 16GB MacBook. Why the reason is privacy rather than performance, how a local model fits into my Obsidian note workflow, the questions I only ask when nothing leaves the machine, and the honest tradeoffs of loading and unloading a model on limited memory.
 
+### 19. [Boot and Shutdown Order: Two Different Reasons Nextcloud Kept Breaking on Reboot](/posts/proxmox-startup-order-nextcloud-nfs-dependency)
+
+Nextcloud dropped into maintenance mode after every reboot, and it turned out to be two separate problems: an unclean shutdown leaving the maintenance flag set, and a boot-time race where Nextcloud started before TrueNAS served its NFS. How the recovery method tells them apart, and the counterintuitive way Proxmox startup delay actually works.
+
 ---
 
 ## What's Coming Next
